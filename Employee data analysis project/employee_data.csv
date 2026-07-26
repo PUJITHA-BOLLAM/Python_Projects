@@ -1,0 +1,12 @@
+Employee_ID,Name,Department,Gender,Age,Salary,Joining_Date,Experience
+101,Asha,IT,Female,24,50000,2022-01-15,2
+102,Ravi,HR,Male,29,45000,2021-07-20,4
+103,Priya,IT,Female,26,,2023-03-10,1
+104,Arjun,Sales,Male,31,55000,2020-11-05,5
+105,Meena,Finance,Female,28,60000,2021-04-12,3
+106,Kiran,IT,Male,,52000,Invalid_Date,2
+107,Neha,HR,Female,25,47000,2022-08-01,2
+108,Vikram,Sales,Male,30,58000,2021-12-15,4
+109,Anjali,Finance,Female,27,61000,2023-02-28,1
+110,Rohit,IT,Male,24,50000,2022-01-15,2
+110,Rohit,IT,Male,24,50000,2022-01-15,2
