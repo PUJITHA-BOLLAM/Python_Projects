@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 df=pd.read_excel("ECommerce_Sales_Dataset.xlsx",sheet_name="ECommerceData")
 #Data information
-'''print(df.head(5))
+print(df.head(5))
 print(df.shape)
 print(df.info())
 print(df.dtypes)
@@ -54,7 +54,6 @@ print("=====Top-5 Products=====")
 print(product_sale.head(5))
 print("Best Selling product:",product_sale.idxmax())
 print("Sales of best selling product:",product_sale.max())
-'''
 
 #VISUALIZATION
 #Graph-1 Sales by Category
@@ -98,18 +97,19 @@ ax[0,2].set_xlabel("Profit")
 ax[0,2].set_ylabel("Region")
 ax[0,2].grid(axis="x")
 for i,value in enumerate(profit.values):
-   ax[0,2].text(i,value,f"{value:.0f}",va="center")
+   ax[0,2].text(value,i,f"{value:.0f}",va="center")
 
 
     #Graph-4 :Payment Method Distribution
 payment=df["Payment_Method"].value_counts()
-ax[1,0].pie(payment.values,labels=payment.index,autopct="%1.1f%%",startangle=90,explode=explode)
+
 explode=[]
 for method in payment.index:
     if method == payment.idxmax():
         explode.append(0.2)
     else:
         explode.append(0)
+ax[1,0].pie(payment.values,labels=payment.index,autopct="%1.1f%%",startangle=90,explode=explode)
 ax[1,0].set_title("Payment Method Distribution",fontweight="bold")
 
 
